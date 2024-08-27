@@ -13,7 +13,9 @@ body {
     background-image: url("./imagens/lenaroxa.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    color: #333;
+    color: #f7f7f7;
+
+    background-position-y: -40vw;
 }
 
 /* Container */

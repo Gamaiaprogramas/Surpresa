@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossas Fotos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="imagex/png" href="./imagens/Hearth.png">
 </head>
 <body>
     <header>
         <nav>
-            <div class="hamburger" onclick="toggleMenu()"></div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <ul id="menu">
-                <li><a href="../Index.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="fotos.html">Fotos</a></li>
                 <li><a href="dedicatoria.html">Dedicação</a></li>
             </ul>
@@ -20,7 +25,7 @@
 
     <div class="container">
         <h1>Nossas Memórias</h1>
-        <p>Aqui estão algumas fotos dos nossos momentos juntos, desde nosso primeiro encontro até as aventuras mais receasdntes.</p>
+        <p>Aqui estão algumas fotos dos nossos momentos juntos, desde nosso primeiro encontro até as aventuras mais recentes.</p>
         
         <div class="gallery">
             <img src="foto1.jpg" alt="Foto 1">
@@ -34,7 +39,15 @@
     <script>
         function toggleMenu() {
             var menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
+            var bars = document.querySelectorAll('.hamburger div');
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+                bars.forEach(bar => bar.classList.remove('change'));
+            } else {
+                menu.style.display = "block";
+                bars.forEach(bar => bar.classList.add('change'));
+            }
         }
     </script>
 </body>

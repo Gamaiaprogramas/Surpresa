@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Dedicação</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="dedicatoria.html">Dedicação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Para Você, Meu Amor</h1>
+        <p>Desde o momento em que te conheci, minha vida mudou para melhor. Cada sorriso seu ilumina meu dia, cada abraço me aquece o coração. Não consigo imaginar minha vida sem você ao meu lado.</p>
+        <p>Este site é apenas um reflexo de como me sinto por você: grato, apaixonado e ansioso por tudo que o futuro nos reserva.</p>
+        <p>Te amo hoje, amanhã e para sempre.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

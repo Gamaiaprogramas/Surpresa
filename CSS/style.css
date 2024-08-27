@@ -1,0 +1,92 @@
+/* style.css */
+
+/* Reset básico */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Menu Hamburger */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Menu */
+nav ul {
+    list-style-type: none;
+    display: none; /* Esconder menu no mobile */
+    text-align: center;
+    background-color: #333;
+}
+
+nav ul li {
+    padding: 10px;
+    border-top: 1px solid #444;
+}
+
+nav ul li:first-child {
+    border-top: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+/* Galeria de Fotos */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilo para o Desktop */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li {
+        padding: 15px 30px;
+        border-top: none;
+    }
+    .hamburger {
+        display: none; /* Esconder o hamburger no desktop */
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

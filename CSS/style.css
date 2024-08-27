@@ -10,8 +10,11 @@ body, h1, p, ul {
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
-    color: #333;
-}
+    color: #240046;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../imagens/lenaroxa.jpg");
+
 
 /* Container */
 .container {
@@ -21,17 +24,36 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #333;
+    background-color: #240046;
     color: #fff;
     padding: 10px 0;
 }
 
 /* Menu Hamburger */
 .hamburger {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
     display: inline-block;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Animação do Hamburger */
+.change.bar1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change.bar2 {
+    opacity: 0;
+}
+
+.change.bar3 {
+    transform: rotate(45deg) translate(-7px, -6px);
 }
 
 /* Menu */
@@ -39,12 +61,12 @@ nav ul {
     list-style-type: none;
     display: none; /* Esconder menu no mobile */
     text-align: center;
-    background-color: #333;
+    background-color: #240046;
 }
 
 nav ul li {
     padding: 10px;
-    border-top: 1px solid #444;
+    border-top: 1px solid #240046;
 }
 
 nav ul li:first-child {
@@ -73,6 +95,12 @@ nav ul li a {
 
 /* Estilo para o Desktop */
 @media (min-width: 768px) {
+    
+    body{
+        background-repeat: repeat;
+        background-size: auto;
+    }
+
     nav ul {
         display: flex;
         justify-content: center;
@@ -89,4 +117,5 @@ nav ul li a {
         max-width: 800px;
         margin: 0 auto;
     }
+}
 }

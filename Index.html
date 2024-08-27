@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Minha Namorada</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="hamburger" oclick="toggleMenu()">&#9776;</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <ul id="menu">
-                <li><a href="../Surpresa/Index.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="fotos.html">Fotos</a></li>
                 <li><a href="dedicatoria.html">Dedicação</a></li>
             </ul>
@@ -20,16 +24,21 @@
 
     <div class="container">
         <h1>Bem-vinda, meu amor!</h1>
-        <p>Este site é um pequeno gesto para mostrar o quanto você significa para mim. 
-        Cada momento que passamaaos juntos é especial e merece ser celebrado.</p>
-        <p>Aqui, você encontrará nossas fotos, memórias, e uma dedicatória especial.</p>
-        <p>Te amo mais do que palavras podem expressar.</p>
+        <p>Este site é dedicado a você, para expressar o quanto você significa para mim.</p>
     </div>
 
     <script>
         function toggleMenu() {
             var menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
+            var bars = document.querySelectorAll('.hamburger div');
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+                bars.forEach(bar => bar.classList.remove('change'));
+            } else {
+                menu.style.display = "block";
+                bars.forEach(bar => bar.classList.add('change'));
+            }
         }
     </script>
 </body>

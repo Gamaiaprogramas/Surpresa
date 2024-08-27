@@ -64,12 +64,12 @@
             <h1>E seremos fofos até o fim ❤</h1>
                 </div>
             <!-- Adicione mais fotos conforme necessário -->
-            <a href="/dedicatoria.html"><button class="butt_fotos">Avançar</button>
+            <a href="/dedicatoria.html" target="_parent"><button class="butt_fotos">Avançar</button>
             </a>
         </div>
 
         
-        <audio src="/audio/Velha Infância (2004 Digital Remaster).mp3" autoplay></audio>
+        <audio id="meuAudio" src="/audio/Velha Infância (2004 Digital Remaster).mp3" autoplay></audio>
     </div>
 
 
@@ -86,6 +86,11 @@
                 bars.forEach(bar => bar.classList.add('change'));
             }
         }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("meuAudio");
+    audio.volume = 0.2; 
+});
     </script>
 </body>
 </html>

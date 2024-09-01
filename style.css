@@ -106,6 +106,12 @@ nav ul li a {
     width: 25vh;
     border-radius: 30vh;
 }
+
+video{
+    height: 80vw;
+    border-radius: 1vh;
+}
+
 .gallery div h1{
     font-size: 3vh;
     font-weight: 100;
